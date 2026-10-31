@@ -1,28 +1,25 @@
 # 🌦️ Weather App – Streamlit
 
-A Python-based weather application built with **Streamlit** and the **OpenWeatherMap API**. It provides current weather conditions and a five-day forecast through an interactive web interface.
+A Python-based weather application built with **Streamlit** and the **OpenWeatherMap API**. The application allows users to retrieve and view current weather information for a selected city through a simple web interface.
 
-**Live Application:** [Weather App](https://weather-app-app-hxynmmbnsfhqpmtnq75zmq.streamlit.app/)
+**Live Application:** [Launch Weather App](https://weather-app-app-hxynmmbnsfhqpmtnq75zmq.streamlit.app/)
 
 ## Features
 
-- **City Search:** Retrieve weather information by entering a city name.
-- **Current Weather:** Display temperature, feels-like temperature, humidity, atmospheric pressure and wind speed.
-- **Five-Day Forecast:** View upcoming weather conditions, including daily minimum and maximum temperatures.
-- **Weather Icons:** Visual representation of weather conditions.
-- **Temperature Conversion:** Switch between Celsius and Fahrenheit.
-- **Error Handling:** Handle invalid city names, API errors and network connection issues.
-- **Responsive Interface:** Streamlit-based interface designed to work across different screen sizes.
-- **Secure API Configuration:** Retrieve API credentials through environment variables or Streamlit Secrets.
+- Search for weather information by city.
+- Retrieve current weather data using the OpenWeatherMap API.
+- Display weather information through a Streamlit interface.
+- Handle API responses and invalid requests.
+- Secure API key configuration using environment variables or Streamlit secrets.
 
 ## Technologies Used
 
-- **Python** – Application logic and API integration.
-- **Streamlit** – Interactive web application framework.
-- **Requests** – HTTP requests and API communication.
-- **OpenWeatherMap API** – Weather data and forecast services.
-- **Git and GitHub** – Source code management and version control.
-- **Streamlit Community Cloud** – Application deployment.
+- **Python** – Application development and API integration.
+- **Streamlit** – Web application framework and user interface.
+- **Requests** – HTTP requests to the OpenWeatherMap API.
+- **OpenWeatherMap API** – Weather data provider.
+- **Git and GitHub** – Version control and source code management.
+- **Streamlit Community Cloud** – Application hosting and deployment.
 
 ## Project Structure
 
@@ -35,91 +32,103 @@ weather-App-Streamlit/
 └── README.md
 ```
 
-## Installation and Setup
+## Getting Started
+
+Follow these instructions to run the application locally.
 
 ### 1. Clone the repository
 
 ```powershell
 git clone https://github.com/KE2541/weather-App-Streamlit.git
+```
 
+### 2. Navigate to the project directory
+
+```powershell
 cd weather-App-Streamlit
 ```
 
-### 2. Create a virtual environment
+### 3. Create a virtual environment
 
 ```powershell
 python -m venv .venv
 ```
 
-Activate the environment on Windows:
+### 4. Activate the virtual environment
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-### 3. Install dependencies
+### 5. Install dependencies
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-### 4. Configure the OpenWeatherMap API key
+## API Key Configuration
 
-Obtain an API key from [OpenWeatherMap](https://openweathermap.org/api).
+The application requires an API key from [OpenWeatherMap](https://openweathermap.org/api).
 
-For local development using PowerShell:
+For local development, set the API key as an environment variable in PowerShell:
 
 ```powershell
 $env:OPENWEATHER_API_KEY="YOUR_API_KEY"
 ```
 
-Replace `YOUR_API_KEY` with your actual API key.
-
-For Streamlit Community Cloud deployment, configure the key under **App Settings → Secrets**:
+For Streamlit Community Cloud deployment, configure the key under the application's **Settings → Secrets**:
 
 ```toml
 OPENWEATHER_API_KEY = "YOUR_API_KEY"
 ```
 
-Never hardcode API credentials or commit secrets to GitHub.
+**Security note:** Never hardcode API credentials in your source code or commit `.env` files or `secrets.toml` containing actual credentials to GitHub.
 
-### 5. Run the application
+## Run the Application
+
+Start the application using:
 
 ```powershell
 python -m streamlit run app.py
 ```
 
-The application will open in your browser, usually at:
+Streamlit will make the application available locally at:
 
-```text
-http://localhost:8501
-```
+`http://localhost:8501`
 
 ## Deployment
 
-The application is deployed using Streamlit Community Cloud.
-
-Access the live application:
+The application is deployed using **Streamlit Community Cloud** and is accessible through the following link:
 
 [https://weather-app-app-hxynmmbnsfhqpmtnq75zmq.streamlit.app/](https://weather-app-app-hxynmmbnsfhqpmtnq75zmq.streamlit.app/)
 
-## Security
+## Skills Demonstrated
 
-The application uses environment variables for local API key configuration and Streamlit Secrets for cloud deployment.
+This project demonstrates practical experience with:
 
-API credentials should never be hardcoded into source files or committed to a public repository.
+- Python application development.
+- REST API integration and HTTP requests.
+- JSON-based API response handling.
+- Environment variable and application secret management.
+- Dependency management using `pip` and `requirements.txt`.
+- Git-based version control and GitHub repository management.
+- Deployment of Python applications using Streamlit Community Cloud.
 
 ## Future Improvements
 
-- Add location-based weather detection.
-- Introduce weather data caching to improve efficiency.
-- Expand weather visualizations and historical weather trends.
-- Add automated application testing.
+Potential enhancements include:
+
+- Five-day weather forecasting.
+- Celsius and Fahrenheit temperature conversion.
+- Weather trend visualizations.
+- Location-based weather detection.
+- API response caching.
+- Automated application testing.
 
 ## Author
 
 **KE2541**
 
-GitHub: [https://github.com/KE2541](https://github.com/KE2541)
+Developed as a practical Python and Streamlit project demonstrating API integration, application development, and cloud deployment.
 
-*Developed as a practical Python project demonstrating third-party API integration, application development, error handling, secure configuration and cloud deployment.*practical Python application integrating a third-party API with an interactive web interface.*
+GitHub: [https://github.com/KE2541](https://github.com/KE2541)
